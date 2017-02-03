@@ -1,0 +1,31 @@
+<md-dialog aria-label="About" ng-cloak md-theme="mainTheme">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Disclaimer</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h2>Real Time Oil Prices takes no responsibility for any losses incurred through usage of this service.</h2>
+        <p>
+          Oil and other commodity trading involves significant risk due to rapid fluctuations of prices. It is your responsibility to understand the risks involved. Real Time Oil Prices does not guarantee the accuracy of any listed prices and is not liable for any loss of equity. 
+        </p>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <md-button>
+        Contact
+      </md-button>
+      <span flex></span>
+      <md-button ng-click="close()" style="margin-right:20px;">
+        Okay
+      </md-button md-autofocus>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
+

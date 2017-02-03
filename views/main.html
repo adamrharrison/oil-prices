@@ -1,0 +1,134 @@
+<!--Desktop/Tablet View-->
+<div hide show-gt-xs layout="column" layout-fill>
+  <md-toolbar class="md-whiteframe-z1" md-theme="mainTheme">
+    <div class="md-toolbar-tools">
+      <img flex="nogrow" class="png-icon" src="img/sml_logo.png"></img>
+      <h2>
+        <span>Real Time Oil Prices</span>
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="Disclaimer" ng-click="showMoreInfo($event)">
+        <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/production/ic_info_48px.svg"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+  <md-content flex layout="row">
+
+    <div layout="row" layout-sm="column" layout-xs="column" flex class="add-overflow">
+      <!--Left side column - shown only on md+ screens-->
+      <div class="ad-extra-padding" layout="column" layout-align="none center" hide show-gt-sm flex="20">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Side -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5354261028257675"
+             data-ad-slot="3829746344"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!--Main content area-->
+      <div flex="100" flex-gt-sm="80" layout="column">
+        <md-card style="background-color: white">
+          <op-graph quote="quotes[0]" chart="wti" name="'WTI Crude Oil'"></op-graph>
+        </md-card>
+
+        <md-card style="background-color: white">
+          <op-graph quote="quotes[1]" chart="brent" name="'Brent Crude Oil'"></op-graph>
+        </md-card>
+
+        <div layout="column" layout-align="none center">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Side -->
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-5354261028257675"
+               data-ad-slot="3829746344"
+               data-ad-format="auto"></ins>
+          <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <div><br></div>
+      </div>
+    </div>
+
+    <md-divider></md-divider>
+
+    <md-sidenav class="md-sidenav-right" md-component-id="right" md-is-locked-open="$mdMedia('gt-xs')" md-theme="sideBarTheme">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/production/ic_opacity_48px.svg" flex="20"></md-icon>
+          <p flex class="md-subhead">
+            Stocks & ETF's
+          </p>
+        </div>
+      </md-toolbar>
+
+      <md-divider></md-divider>
+
+      <md-content class="md-padding">
+        <op-quote ng-repeat="quote in stockQuotes" quote="quote"></op-quote>
+      </md-content>
+    </md-sidenav>
+
+  </md-content>
+</div>
+
+
+<!--Mobile view-->
+<div hide-gt-xs layout="column" layout-fill>
+  <md-toolbar class="md-whiteframe-z1" md-theme="mainTheme">
+    <div class="md-toolbar-tools">
+      <img flex="nogrow" class="png-icon" src="img/sml_logo.png"></img>
+
+      <h2>
+        <span>Real Time Oil Prices</span>
+      </h2>
+      <span flex></span>
+      <md-button class="md-icon-button" aria-label="More Info" ng-click="showMoreInfo($event)">
+        <md-icon md-svg-icon="bower_components/material-design-icons/action/svg/production/ic_info_48px.svg"></md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+
+
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Oil Prices">
+        <md-content class="md-padding">
+          <md-card style="background-color: white">
+            <op-graph quote="quotes[0]" chart="wti" name="'WTI Crude Oil'" mobile="'yes'"></op-graph>
+          </md-card>
+
+          <md-card style="background-color: white">
+            <op-graph quote="quotes[1]" chart="brent" name="'Brent Crude Oil'" mobile="'yes'"></op-graph>
+          </md-card>
+        </md-content>
+      </md-tab>
+      <md-tab label="Stocks & ETF's">
+        <md-content class="md-padding">
+          <op-quote ng-repeat="quote in stockQuotes" quote="quote"></op-quote>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+
+    <div layout="column" layout-align="none center" hide-gt-sm>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- bottom -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-5354261028257675"
+           data-ad-slot="5306479547"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+ 
+</div>
+
+
+
+

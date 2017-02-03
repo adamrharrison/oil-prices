@@ -1,0 +1,32 @@
+{
+  "name": "oil",
+  "authors": [
+    "(Adam <adamharrison2012@gmail.com>)"
+  ],
+  "description": "Site for live oil prices",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "oil",
+    "prices",
+    "live",
+    "money",
+    "earn",
+    "free"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.0",
+    "angular-material": "^1.0.6",
+    "angular-route": "^1.5.0",
+    "material-design-icons": "^2.2.0"
+  }
+}

@@ -1,0 +1,101 @@
+
+
+<div class="quote-scroll-padding">
+  <span class="md-body-1 gray-text">{{quote.Name}}</span><br>
+  <span class="md-body-1 gray-text">{{quote.symbol}}</span><br>
+  <span class="md-display-1">{{quote.LastTradePriceOnly | number:2}}</span><br>
+  <span class="sm-subhead" ng-class="{'green-text': quote.Change > 0, 'red-text': quote.Change < 0}">{{quote.Change}} ({{quote.PercentChange}})</span>
+  <div layout="row">
+    <div>
+      <table class="md-caption table-line-spacing">
+        <tr>
+          <td class="gray-text">
+            Close:
+            <md-tooltip md-direction="right">
+              Closing price on the last trading day.
+            </md-tooltip>
+          </td>
+          <td class="right-align">{{quote.PreviousClose | number:2}}</td>
+        </tr>
+        <tr>
+          <td class="gray-text">
+            Open:
+            <md-tooltip md-direction="right">
+              Opening price on the latest trading day.
+            </md-tooltip>
+          </td>
+          <td class="right-align">{{quote.Open | number:2}}</td>
+        </tr>
+        <tr>
+          <td class="gray-text">
+            Bid:
+            <md-tooltip md-direction="right">
+              The highest bid price in the market.
+            </md-tooltip>
+          </td>
+          <td class="right-align">{{quote.Bid | number:2}}</td>
+        </tr>
+        <tr>
+          <td class="gray-text">
+            Ask:
+            <md-tooltip md-direction="right">
+              The lowest ask price of a stock share.
+            </md-tooltip>
+          </td>
+          <td class="right-align">{{quote.Ask | number:2}}</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <table class="md-caption table-line-spacing" style="padding-left: 0.5em;">
+        <tr>
+          <td class="gray-text">
+            Range:
+            <md-tooltip md-direction="right">
+              Price range (low - high) in the latest trading day.
+            </md-tooltip>
+          </td>
+          <td class="right-align">{{quote.DaysLow | number:2}} - {{quote.DaysHigh | number:2}}</td>
+        </tr>
+        <tr>
+          <td class="gray-text">
+            52 Wk:
+            <md-tooltip md-direction="right">
+              Price range (low - high) in the last 52 weeks.
+            </md-tooltip>
+          </td>
+          <td class="right-align">{{quote.YearLow | number:2}} - {{quote.YearHigh | number:2}}</td>
+        </tr>
+        <tr>
+          <td class="gray-text">
+            Volume:
+            <md-tooltip md-direction="right">
+              Number of shares traded on the lastest trading day.
+            </md-tooltip>
+          </td>
+          <td class="right-align">{{quote.Volume}}</td>
+        </tr>
+        <tr ng-show="quote.marketCap">
+          <td class="gray-text">
+            Mkt Cap:
+            <md-tooltip md-direction="right">
+              Total value of a company in the stock market.
+            </md-tooltip>
+          </td>
+          <td class="right-align">{{quote.MarketCapitalization}}</td>
+        </tr>
+        <tr ng-show="quote.PERatio">
+          <td class="gray-text">
+            P/E:
+            <md-tooltip md-direction="right">
+              The share price divided by the earnings per share.
+            </md-tooltip>
+          </td>
+          <td class="right-align">{{quote.PERatio}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<md-divider></md-divider>
+
